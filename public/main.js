@@ -1,4 +1,3 @@
-
 async function cargarCursos() {
   try {
     const res = await fetch('http://localhost:3000/cursos');
@@ -154,7 +153,7 @@ function renderAsistencias(asistencias) {
   <td>${a.id}</td>
   <td>${a.alumno_id}</td>
   <td>${a.nombres}</td>
-  <td>${a.apellido}</td>
+  <td>${a.apellidos}</td>
   <td>${a.tipo}</td>
   <td>${a.hora_ingreso || '-'}</td>
   <td>${a.hora_egreso || '-'}</td>

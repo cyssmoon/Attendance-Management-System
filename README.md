@@ -1,10 +1,17 @@
-# 📋 Sistema de Gestión de Asistencias
+# 📋 Attendance Management System
 
-> Aplicación web para registrar y consultar asistencias de alumnos por curso y materia.
+> A web application to record and query student attendance by course and subject.
 
------
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
-## 📁 Estructura
+---
+
+## 📁 Project Structure
 
 ```
 tp/
@@ -16,69 +23,75 @@ tp/
     └── main.js
 ```
 
------
+---
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- 👤 Crear alumnos y asignarlos a un curso
-- ✅ Registrar asistencia por alumno, materia y tipo
-- 🔍 Consultar asistencias filtrando por curso, materia y fecha
-- ✏️ Editar registros existentes
-- 🗑️ Eliminar registros con confirmación
+- 👤 **Create students** and assign them to a course
+- ✅ **Record attendance** by student, subject, and type
+- 🔍 **Query attendance** filtering by course, subject, and date
+- ✏️ **Edit** existing records
+- 🗑️ **Delete** records with confirmation prompt
 
------
+---
 
-## 🗄️ Base de datos
+## 🗄️ Database
 
-Tablas: `cursos`, `alumnos`, `materias`, `registros`
+**Tables:** `courses` · `students` · `subjects` · `records`
 
-Tipos de asistencia: `A` (ausente) · `P` (presente) · `T` (tarde) · `RA` (retiro anticipado) · `AP` (ausente con permiso)
+**Attendance types:**
 
------
+| Code | Meaning |
+|------|---------|
+| `P` | Present |
+| `A` | Absent |
+| `T` | Late |
+| `RA` | Early departure |
+| `AP` | Excused absence |
 
-## 🌐 Endpoints API
+---
 
-|Método|Ruta                |Descripción          |
-|------|--------------------|---------------------|
-|GET   |`/cursos`           |Listar cursos        |
-|GET   |`/materias/:cursoId`|Materias de un curso |
-|GET   |`/alumnos/:cursoId` |Alumnos de un curso  |
-|POST  |`/alumnos`          |Crear alumno         |
-|POST  |`/asistencias`      |Registrar asistencia |
-|GET   |`/asistencias`      |Consultar asistencias|
-|PUT   |`/asistencias/:id`  |Editar asistencia    |
-|DELETE|`/asistencias/:id`  |Eliminar asistencia  |
+## 🌐 API Endpoints
 
------
+| Method | Route | Description |
+|--------|-------|-------------|
+| `GET` | `/cursos` | List all courses |
+| `GET` | `/materias/:cursoId` | Get subjects for a course |
+| `GET` | `/alumnos/:cursoId` | Get students in a course |
+| `POST` | `/alumnos` | Create a new student |
+| `POST` | `/asistencias` | Record attendance |
+| `GET` | `/asistencias` | Query attendance records |
+| `PUT` | `/asistencias/:id` | Update an attendance record |
+| `DELETE` | `/asistencias/:id` | Delete an attendance record |
 
-## 🚀 Cómo correrlo
+---
 
+## 🚀 Getting Started
+
+**1. Import the database**
 ```bash
-# 1. Importar la base de datos
 mysql -u root -p < bd.sql
+```
 
-# 2. Instalar dependencias
+**2. Install dependencies**
+```bash
 npm install
+```
 
-# 3. Iniciar el servidor
+**3. Start the server**
+```bash
 node server.js
 ```
 
-Abrí `http://localhost:3000` en el navegador.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
------
+---
 
-## 🛠️ Stack
+## 🛠️ Tech Stack
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+- **Backend:** Node.js + Express
+- **Database:** MySQL
+- **Frontend:** Vanilla JavaScript, HTML5, CSS3
 
------
+---
 
-## 👩‍💻 Autora
-
-**Luna Estanga** 
